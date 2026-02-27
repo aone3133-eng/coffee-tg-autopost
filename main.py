@@ -48,15 +48,13 @@ def generate_post(kind: str) -> str:
     return random.choice(contest)
 
 def choose_kind(now: datetime):
-    wd = now.weekday()  # 0=Mon
+    wd = now.weekday()  # 0=Mon ... 6=Sun
     if wd == 0:
         return "sell"
     if wd == 2:
         return "vibe"
     if wd == 4:
         return "engage"
-    if wd == 5:
-        return "contest"
     return None
 
 def main():
